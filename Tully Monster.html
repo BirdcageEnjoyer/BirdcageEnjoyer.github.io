@@ -5,32 +5,16 @@
 	<style>
 		body {font-family: arial, "sans-serif";}
 	</style>
-
-<!-- [if gte mso 9]><xml>
-<mso:CustomDocumentProperties>
-<mso:xd_Signature msdt:dt="string"></mso:xd_Signature>
-<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">Matthew Montgomery</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
-<mso:Order msdt:dt="string">1000.00000000000</mso:Order>
-<mso:xd_ProgID msdt:dt="string"></mso:xd_ProgID>
-<mso:_ExtendedDescription msdt:dt="string"></mso:_ExtendedDescription>
-<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">Matthew Montgomery</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
-<mso:ComplianceAssetId msdt:dt="string"></mso:ComplianceAssetId>
-<mso:TemplateUrl msdt:dt="string"></mso:TemplateUrl>
-<mso:ReferenceId msdt:dt="string"></mso:ReferenceId>
-<mso:ContentTypeId msdt:dt="string">0x010100B699FA792B00854894EC91F7CAF32A7D</mso:ContentTypeId>
-<mso:TriggerFlowInfo msdt:dt="string"></mso:TriggerFlowInfo>
-<mso:_SourceUrl msdt:dt="string"></mso:_SourceUrl>
-<mso:_SharedFileIndex msdt:dt="string"></mso:_SharedFileIndex>
-</mso:CustomDocumentProperties>
-</xml><![endif] -->
 </head>
 <body>
 
 <h1>The Tully Monster</h1>
 
 <p>The Tully Monster is a fossilised creature believed to have lived 300 million years ago. It was discovered by and named after Francis Tully in 1958.</p>
-
+<div id="monster">
 <img src="TullyMonster.png">
+<button type="button" onclick="showHide()">click to hide image</button>
+</div>
 
 <form name="question">
 <p id="box">Question - How long was the Tully Monster?</p> 
@@ -41,8 +25,10 @@
 
 </form>
 <script>
+	document.write("<h1>helloworld</h1>")
 	function validate() {
 		var x = document.forms["question"]["answer"].value;
+		document.write("<h1>helloworld</h1>")
 		if (x == "") {
 			document.getElementById("box").style.color ="red";
 		}
@@ -50,9 +36,18 @@
 			alert("correct");
 		}
 	}
-</script>
-<script>
 	
+	function showHide() {
+		var x = document.getElementById("monster");
+		if (x.style.display == 'block') {
+       		x.style.display = 'none';
+			document.write("<h1>helloworld</h1>");
+		}
+   		else {
+       		x.style.display = 'block';
+		}
+	}
 </script>
+
 </body>
 </html>
