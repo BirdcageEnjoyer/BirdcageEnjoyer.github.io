@@ -15,9 +15,10 @@
 
 
 <form>
-<div id="diceImage"> </div> <!-- Empty div to contain random dice image -->
-<input type="text" name="test" id="input" onInput="checkValid();">
-
+	<div id="diceImage"> </div> <!-- Empty div to contain random dice image -->
+	<input type="text" name="test" id="input" onInput="checkValid();placeDice()" min="1" max="6">
+	<button id="btn" type ="button" onClick="checkValid()">roll dice</button>
+	<p id="errormessage" style="color: red; display:none;"> please enter number between 1 and 6</p>
 </form>
 
 <script>
@@ -32,12 +33,22 @@ rollDice();
 </script>
 
 <script>
+	function placeDice() {
+		var givenInput = document.getElementById("input").value;
+		var placedDice = ["Roll1.jpeg","Roll2.jpeg","Roll3.jpeg","Roll4.jpeg","Roll5.jpeg","Roll6.jpeg"];
+		document.getElementById("diceImage").innerHTML="<img src='"+placedDice[givenInput-1]+"'>";
+	}
+</script>
+
+<script>
 function checkValid() {
-	if ((document.getElementsByID("input") < 7) && (document.getElementByID("input")) > 0) {
-		rollDice();
+	var playerInput = document.getElementById("input").value;
+	var errormessage = document.getElementById("errormessage")
+	if (playerInput < 1 || playerInput > 6 || isNaN(playerInput)) {
+		errormessage.style.display = "block";
 	}
 	else {
-		document.write("hello");
+		errormessage.style.display = "none";
 	}
 }
 </script>
