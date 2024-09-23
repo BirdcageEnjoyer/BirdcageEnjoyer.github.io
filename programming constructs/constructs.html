@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function fiveTimesTable() {
+                var s = ""
+                for (var i = 1;i<13;i++) {
+                    s = s + i + " times 5 equals " + (i * 5) + "<br>"
+                    var element = document.getElementById("timestable")
+                    element.innerHTML = s
+                }
+                return false
+            }
+
+            function timesTable() {
+                var row = document.getElementById("rows").value;
+                var rowCount = 0;
+                if (!isNaN(row) && row.trim() != "") {
+                    var rowCount = parseInt(row, 10);
+                }
+                var number = document.getElementById("number").value;
+                var a = ""
+                for (var count = 1;count<rowCount+1;count++) {
+                    a = a + count + " times " + number + " equals " + (count * number) + "<br>"
+                    var tableValues = document.getElementById("timetableRow")
+                    tableValues.innerHTML = a
+                }
+                return false
+            }
+
+            function whileLoopTimesTable() {
+                var a = ""
+                var count = 1
+                while (count < 13) {
+                    a = a + count + " times 5 equals " + (count * 5) + "<br>"
+                    count = count + 1
+                    var element = document.getElementById("whileLoopTimesTable")
+                    element.innerHTML = a
+                }
+                return false
+            }
+
+            function repeatedLoopTimesTable() {
+                var count = 1
+                var a = ""
+                do {
+                    a = a + count + " times 5 equals " + (count * 5) + "<br>"
+                    var element = document.getElementById("repeatedLoopTimesTable")
+                    element.innerHTML = a
+                    count = count + 1
+                } while (count < 13);
+                return false
+            }
+        </script>
+
+    </head>
+    <body>
+        <form onsubmit="return fiveTimesTable()">
+            my form
+            <input type="submit">
+         </form>
+
+         <form onsubmit="return whileLoopTimesTable()">
+            while loop button
+            <input type="submit">
+         </form>
+
+         <form onsubmit="return repeatedLoopTimesTable()">
+            repeated loop button
+            <input type="submit">
+         </form>
+
+         <form onsubmit="return timesTable()">
+            <input id="rows" type="text" placeholder="Number of rows to show"> 
+            <input id="number" type="text" placeholder="Number you want the times table of"> 
+            <input id="rowTimesTableButton" type="submit">
+         </form>
+
+         <p id="timestable"></p>
+         <p id="whileLoopTimesTable"></p>
+         <p id="repeatedLoopTimesTable"></p>
+         <p id="timetableRow"></p>
+    </body>
+</html>
+
+
