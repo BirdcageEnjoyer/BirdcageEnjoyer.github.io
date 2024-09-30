@@ -3,15 +3,15 @@ name = []
 index = 0
 
 
-function searchForName(wanted_name)
-    for i in range(0, max) do       
-        if name[i] == wanted_name then
+def searchForName(wanted_name):
+    for i in range(0, max):     
+        if name[i] == wanted_name:
             index = i
             return index + 1
             break
-        endif
-    endfor
-endfunction
+#         endif
+#     endfor
+# endfunction
     
     
         
