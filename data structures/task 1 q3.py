@@ -20,3 +20,5 @@ print("Total for quarter 1", quarter1)
 print("Total for quarter 2", quarter2)
 print("Total for quarter 3", quarter3)
 print("Total for quarter 4", quarter4)
+
+
