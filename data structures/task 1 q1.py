@@ -10,3 +10,4 @@ for i in range(1, 7):
 print(numbers[::-1])
 print(total)
 print(total/count)
+
