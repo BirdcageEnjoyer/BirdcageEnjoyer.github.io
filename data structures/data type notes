@@ -1,0 +1,51 @@
+elementary data types are data like integers, character etc.
+examples:
+integer
+real
+boolean
+char
+
+composite data types are data types made up of other data types, like a list, which might be made up of integers.
+examples:
+string
+array
+list (depending on programming language)
+
+abstract data types are categorised as abstract depending on behaviour rather than the data type itself
+list, stack, queue
+
+QUEUES:
+- joining from rear
+- exit at the front
+- queue is a concept that can be implemented in computing, the concept of a queue
+- enqueue() - this function adds an element to rear of queue
+- dequeue() - this function removes an element from the front of queue.
+- is_empty() - check if queue is empty so that we can know if we can dequeue() from the queue since if there is nothing, you can't take anything out of it.
+- is_full() - check if queue is full so that we can know if we can enqueue() in the queue since if it is full, we cant add anymore.
+- attributes of queue
+    - has a maximum size (max_size)
+    - current size (size), if is the same as max size then we know queue is full.
+    - we need the position, where the front of the queue is and where the rear is so we can enqueue() and dequeue() where we want correctly.
+    - abstract data type because it doesn't matter how you create or work with the queue.
+
+- types of queue
+    - linear
+    - circular
+    - priority
+
+[, , , , , ]
+front = 0
+rear = 0
+enqueue(2) rear += 1, the idea is to set a front and rear so you know where its going to enquee, by incrementting the rear gets moved to the new actual rear
+
+to dequeue(), just increment front pointer because now instead of front being 0, 1 is the front, and 0 is no longer, but because it is no longer part of the queue anymore, it is irrelevant and no longer there basically. this is more efficient than manually deleting front and changing every single element and moving them up a position in queue
+
+linear queues:
+    - can only add elements until you reach the end of the array, because as you move the front pointer, you decrease the size of the array that is available, hence it is linear.
+
+circular queue:
+    - with circular, instead of just rear += 1, we also do rear += 1 MOD max_size. this is instead of going off the edge, it loops back round to the first element
+        - e.g 5 MOD 5 = 0 
+
+priority queue:
+    - with priority queue you check all the elements in the queue's priority, and insert the new element based on it's priority in the queue, when enqueuing. the dequeueing is still the same.
