@@ -1,0 +1,13 @@
+stacks overflow - pushing on to a full stack by adding more stuff when memory full
+stack underflow - trying to pop from an empty stack since it has nothing in it
+
+
+call stack used whenever a function or subroutine is called
+memory location of a line of code is pushed onto a stack, so if you have a line of a function and then print, print is pushed on
+then function is pushed on, the function gets run, then popped off the stack, and then print.
+
+e.g 
+max(a,b) - a function
+print() 
+
+max the function is run, then popped off stack, then print is run and popped off.
