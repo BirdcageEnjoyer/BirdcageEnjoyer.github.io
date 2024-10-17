@@ -11,3 +11,11 @@ max(a,b) - a function
 print() 
 
 max the function is run, then popped off stack, then print is run and popped off.
+
+programming operations for stacks:
+1. push(itemm) - adds item to the top of the stack (last spot)
+2. pop() - removes last item in stack
+3. isFull() - checks if stack is full - dont really need on a list in python since list is dynamic.
+4. isEmpty() - checks if stack is empty
+5. peek() - returns what value is at the top of the stack (last spot) without deleting it like pop() does
+6. size() - returns number of items in the stack
