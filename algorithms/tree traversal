@@ -1,0 +1,13 @@
+types of methods
+    - pre order - sometimes referred to as depths first
+    - in order - also depths first but slightly different - alphabetical
+        - 1. traverse left sub tree if there is one until no more
+        - 2. visit root node
+        - 3. traverse right sub tree if there is one
+    - post order - also depths first but slightly different
+        - 1. traverse left sub tree
+        - 2. traverse right sub tree
+        - 3. visit root node
+        - basically all the child nodes are visited before parent nodes by checking the left sub tree first if there is one, then the right if there is one, and then then the root node of the sub tree.
+
+    breadth first tree traversal - same as bread first in graph

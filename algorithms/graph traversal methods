@@ -1,0 +1,16 @@
+depths first - go as far down as possible down a path of a graph then backtrack to the beginning to go to a new path
+    - can be done with a recursive or iterative
+    - if using an iterative, we use a stack to keep track of the order of the vertices we are visiting, if we are goign down a path, that path will be pushed onto stack, then we go through it, then once we finish and come back out, it is popped from the stack
+
+
+    can be used for job scheduling where some jobs have to be completed before others can begin
+    finding a path between two vertices
+    solving puzzles such as navigating a maze
+
+
+breadth first - go into the neighbouring places of the current place, 
+    - can be done with iterative which wll use queues instead of stack
+    - enqueue first item, then dequeue it after visited, enqueue its neighbours, and visit its neighbours and repeat
+
+
+
