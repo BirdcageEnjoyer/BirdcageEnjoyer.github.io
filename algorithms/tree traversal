@@ -1,5 +1,11 @@
 types of methods
+
+    each time an action is successfully done, or not possible, move on to next, like in pre order, if you visit root node and are successful, try to do next step, which is go left, but since you are onto new node, reset back to beginning, visit root node, then travel left, if successful repeat, if it is unsuccessful, then you move onto next step instead of resetting.
+    
     - pre order - sometimes referred to as depths first
+        - 1. visit root
+        - 2. traverse left
+        - 3. traverse right
     - in order - also depths first but slightly different - alphabetical
         - 1. traverse left sub tree if there is one until no more
         - 2. visit root node
