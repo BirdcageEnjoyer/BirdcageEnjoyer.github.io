@@ -1,0 +1,35 @@
+Lossy
+    * loss of data - unnecessary data
+        - in an image for example: colour resolution, colour depth
+    * in sounds removes the sounds in frequency ranges we cant hear or least affected sounds that are subtle
+
+    pros:
+        - lowers data required for a file more than lossless
+
+    cons:
+        - cant use on text file since you lose letters / characters so you wont be able to read it and it make sense
+
+
+Lossless:
+    * same file after decompression
+    * no loss of data
+    * uses an algorithm to identify frequently used data, so that repetetive dat is stored as a singul kind of data so everytime it is repeated, you arent
+    using a whole new extra bit of data to store it separately.
+        - e.g 1111100011111111000001101, number of repetitions, then what is repeated, sometimes it doesnt even reduce file size by that much if the compressed is realy similar to original because there isnt much to that is similar to one another, however if the data has many similar points, then you can reduce a lot of the file size.
+    * one example is dictionary compression
+        - spots regularly occurring data and stores it separately in a dictionary
+            - e.g compress the phrase "no pain no gain" [15 bytes]
+            no. entry   binary
+            1   no_     00
+            2   p       01 
+            3   ain_    10
+            4   g       11
+
+            using the example above "no pain no gain" = 0001 1000 1110 = [12 bits] so 3 less bits
+
+    pros:
+        - can use on any file
+
+    cons:
+        - doesnt compress as much as lossy
+        - complex to do a compression like this
