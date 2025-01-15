@@ -1,0 +1,17 @@
+vernam cipher 
+    * proven to be unbreakable
+        - uses a one time pad as it's encryption key
+        - one time key is generated in a truly random manner
+            * this cannot be obtained from rng, because rng isn't truly random it is pseudorandom, things like weather phenomenon is used, half life decay
+        - one time pad must be transferred by hand
+    
+    * decoding
+        - encryption and decryption of the message is performed bit by bit using an excluse or (xor) operation with the shared key
+
+        L = 01001100
+        c = 01100011 - key, add these two binary numbers and you get
+    
+        00101111 = l
+
+        exclusive or is a reversable operation, so with other logic gates like AND, you cant reverse it because you don't know what pair of binary numbers you need.
+
