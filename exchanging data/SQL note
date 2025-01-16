@@ -1,0 +1,31 @@
+SQL
+    * structured query language
+    * declarative language for querying and updating tables in a regional database
+    * can be used to create tables
+    * can be used in a programming language like python to access and manipulate a database
+
+creating table:
+e.g
+    CREATE TABLE tblProducts
+    (
+        prodID  CHAR(3) NOT NULL PRIMARY KEY,
+        productName VARCHAR(25) NOT NULL,
+        subject VARCHAR(30),
+        level int
+        .....
+        ...
+    )
+
+
+linked tables define
+FOREIGN KEY (prodid) REFERENCES tblProducts(prodid)
+
+to insert a new record into tblProducts table the syntax:
+INSER INTO tblProducts(productid, name, subject, level, price).
+VALUES (the values from above)
+
+secondary key
+    * does not need to be uniue
+    * primary key is automatically indexed so any particular record can be found very quickly
+    * if searches often need to be made on title or subject either or both fields could be defined as a secondary key
+    * the field searched frequently will then be indexed for faster searches

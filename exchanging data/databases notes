@@ -1,0 +1,32 @@
+databases
+    * somewhere where data is stored
+    * made up of one or more tables
+        -
+    * relational database 
+
+
+entity relationships - the three entities are linked 
+    * one to one
+    * one to many
+    * many to many
+
+many to many
+    * cannot be directly linked
+    * e.g customer subscribes to product, product can be subscribed to many customers
+        - cannot be linked directly because you would need several fields to hold the ID of each product a customer has subscribed to
+        but you wont know how many products someone will decide to subscribe to
+        - you also cannot duplicate the customer id
+
+
+
+common data types:
+    * CHAR - char string of fixed length n
+    * VARCHAR - character string variable length
+    * BOOLEAN - true or false
+    * INTEGER - integer
+    * FLOAT - number with floating decimal point
+    * DATE - stores day month year values
+    * TIME - hour minute second
+    * CURRENCY - formats nuumbers in the currency used in your region
+
+    

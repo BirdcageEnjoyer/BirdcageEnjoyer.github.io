@@ -1,0 +1,44 @@
+vernam cipher 
+    * proven to be unbreakable
+        - uses a one time pad as it's encryption key
+        - one time key is generated in a truly random manner
+            * this cannot be obtained from rng, because rng isn't truly random it is pseudorandom, things like weather phenomenon is used, half life decay
+        - one time pad must be transferred by hand
+    
+    * decoding
+        - encryption and decryption of the message is performed bit by bit using an excluse or (xor) operation with the shared key
+
+        L = 01001100
+        c = 01100011 - key, add these two binary numbers and you get
+    
+        00101111 = l
+
+        exclusive or is a reversable operation, so with other logic gates like AND, you cant reverse it because you don't know what pair of binary numbers you need.
+
+
+
+symmetric
+    * public key is used for both encryption and decryption
+    * public key is sent along with data too
+        - if data is intercepted, the interceptor can immediately decrypt the message because they have the key now
+    * simpler to implement algorithmically
+    * not processor intensive
+
+asymmetric
+    * public key is used for encryption, it is sent to those who are trusted and need to use it for encryption
+    * private key, which is not sent across with data, is used to decrypt data
+        - more secure since if data is intercepted it cant be decrypted unless they can find out the private key
+    * more complex algorithmically
+    * a not trusted user may get their hands on the public key to send data to you, making you think they are trusted, and leaking important data
+
+
+- normally a mix of both is used to compensate for weaknesses, the pros of both are used together
+
+hashing algorithms
+    * algorithm that turns something into a complex piece of data that looks like random data
+    * non reversible
+    * used often to encrypt passwords
+        - e.g a hash value is kept for a password on the database so that if database is hacked, there are no passwords because theres just a bunch
+        of unreversible hash values
+
+    * hash total are mathematical values calculated from unencrypted data
