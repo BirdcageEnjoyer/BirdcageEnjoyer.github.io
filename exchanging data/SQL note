@@ -1,31 +1,45 @@
-SQL
-    * structured query language
-    * declarative language for querying and updating tables in a regional database
-    * can be used to create tables
-    * can be used in a programming language like python to access and manipulate a database
+-- SQL
+--     * structured query language
+--     * declarative language for querying and updating tables in a regional database
+--     * can be used to create tables
+--     * can be used in a programming language like python to access and manipulate a database
 
-creating table:
-e.g
-    CREATE TABLE tblProducts
-    (
-        prodID  CHAR(3) NOT NULL PRIMARY KEY,
-        productName VARCHAR(25) NOT NULL,
-        subject VARCHAR(30),
-        level int
-        .....
-        ...
-    )
+-- creating table:
+-- e.g
+--     CREATE TABLE tblProducts
+--     (
+--         prodID  CHAR(3) NOT NULL PRIMARY KEY,
+--         productName VARCHAR(25) NOT NULL,
+--         subject VARCHAR(30),
+--         level int
+--         .....
+--         ...
+--     )
 
 
-linked tables define
-FOREIGN KEY (prodid) REFERENCES tblProducts(prodid)
+-- linked tables define
+-- FOREIGN KEY (prodid) REFERENCES tblProducts(prodid)
 
-to insert a new record into tblProducts table the syntax:
-INSER INTO tblProducts(productid, name, subject, level, price).
-VALUES (the values from above)
+-- to insert a new record into tblProducts table the syntax:
+-- INSER INTO tblProducts(productid, name, subject, level, price).
+-- VALUES (the values from above)
 
-secondary key
-    * does not need to be uniue
-    * primary key is automatically indexed so any particular record can be found very quickly
-    * if searches often need to be made on title or subject either or both fields could be defined as a secondary key
-    * the field searched frequently will then be indexed for faster searches
+-- secondary key
+--     * does not need to be uniue
+--     * primary key is automatically indexed so any particular record can be found very quickly
+--     * if searches often need to be made on title or subject either or both fields could be defined as a secondary key
+--     * the field searched frequently will then be indexed for faster searches
+
+
+-- when linking many to many:
+--     * use composite key, because if you tried to for example, put a foreign key from the first entity, you wont have unique primary key anymore if 
+--     they appear twice
+--     e.g a customer buys monitor twice, the monitor of the same product id will appear twice and this causes data integrity issues etc since data
+--     might become ambiguous and can no longer differentiate between records.
+
+--     therefore
+--             we could do this:
+--                 customer -< order >- products
+--                 where each order has a unique primary key because each order is a new order, and the secondary keys are the foreign keys, customer and product
+--                 id, since secondary keys dont need to be unique. 
+--                 customer id will link to customers table, product id will link to product table
