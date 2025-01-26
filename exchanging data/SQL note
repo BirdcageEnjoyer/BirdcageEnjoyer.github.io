@@ -43,3 +43,24 @@
 --                 where each order has a unique primary key because each order is a new order, and the secondary keys are the foreign keys, customer and product
 --                 id, since secondary keys dont need to be unique. 
 --                 customer id will link to customers table, product id will link to product table
+
+-- alter is used to edit a column
+--      * actions followed by alter:
+--         * add entity data type
+--         * drop column name
+--         * modify column name data type, not null
+-- * update statement is used to update a record in a database table
+--     * update tablename
+--     * set field name = field name + action, e.g salay*1.1
+--     * where (only updates the certain records specified here)
+
+-- * delete is used to delete from a record in table
+--     * delete from tablename
+--     * where ...
+
+-- * referential integrity enforces that you cannot delete a record whiched is referenced already by a record in another table
+
+-- * like opertaor enables us to filter on a substring and returns if substring is in the string.
+--     * e.g, LIKE('comp%') percent is the wildcard, anything as long as it has 'comp' starting e.g 'computing' 'computer science'
+
+-- * join table1name on table2name.key = table1name.key links 2 tables together
