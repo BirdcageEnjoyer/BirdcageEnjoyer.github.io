@@ -1,0 +1,8 @@
+reasons to normalize:
+    * easier to maintain database
+    * help maintain referential integrity
+    * avoid accidentally deleting
+
+normalization is the changing of design of a database to make it more efficient, easier to maintain etc.
+
+each normal form is an upgraded version of the previous version of data base, getting up to 3rd form when its fully refined.
