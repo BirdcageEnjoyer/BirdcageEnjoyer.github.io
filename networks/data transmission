@@ -1,0 +1,9 @@
+serial transmission and parallel:
+serial - one packet at a time
+parallel - multiple packets at a time.
+
+
+simplex transmission - data travels in one direction
+duplex transmission - data travels in both directions, and can be at the same time
+half duplex - data transmission in both directions not simultaneously
+    * e.g walkie talkies
